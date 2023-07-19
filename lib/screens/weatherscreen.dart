@@ -22,7 +22,7 @@ class _WeatherscreenState extends State<Weatherscreen> {
   var city;
   Future getWeather() async {
     http.Response response = await http.get(Uri.parse(
-        'https://api.openweathermap.org/data/2.5/weather?q=${widget.cityname.toString()}&units=metric&appid=cfd888e26a4060a4c5e903d91c0d8492'));
+        'https://api.openweathermap.org/data/2.5/weather?q=${widget.cityname.toString()}&units=metric&appid=your api'));
     var results = jsonDecode(response.body);
     setState(() {
       this.temp = results['main']['temp'];
